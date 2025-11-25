@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fingerprint Debit Notification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body { font-family: Arial, sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+        .wrap { max-width:620px; margin:0 auto; }
+        .card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+        .header { background:#0b6b4a; color:#fff; padding:18px 20px; text-align:left; }
+        .header img { height:34px; vertical-align:middle; }
+        .body { padding:20px; color:#222; }
+        .greeting { font-size:16px; margin-bottom:8px; }
+        .lead { margin:0 0 12px; color:#444; }
+        .details { width:100%; border-top:1px solid #eee; padding-top:12px; margin-top:12px; }
+        .details table { width:100%; border-collapse:collapse; }
+        .details th, .details td { text-align:left; padding:8px 0; vertical-align:top; }
+        .details th { width:38%; color:#666; font-weight:600; }
+        .important { font-weight:700; color:#0b6b4a; }
+        .btn { display:inline-block; margin-top:14px; text-decoration:none; padding:10px 16px; border-radius:6px; background:#0b6b4a; color:#fff; }
+        .note { font-size:13px; color:#666; margin-top:14px; }
+        .footer { text-align:center; font-size:12px; color:#999; padding:14px 6px; }
+        .danger { color:#c0392b; font-weight:700; }
+        @media only screen and (max-width:480px){
+          .header, .body { padding:14px; }
+          .details th { display:block; width:100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="card">
+        <div class="header">
+            <!-- Optional inline logo reference: <img th:src="@{'cid:companyLogo'}" alt="Logo"/> -->
+            <span style="font-size:18px; font-weight:700; letter-spacing:0.2px;">Bio-Pay Bank</span>
+        </div>
+
+        <div class="body">
+
+            <p class="lead">
+                A <span class="important">Biometric Transaction</span> was made on your account.
+                If this was you, no action is needed. If you did not authorize this, contact support immediately.
+            </p>
+
+            <div class="details">
+                <table>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <td th:text="${transactionId}">TXN-123456</td>
+                    </tr>
+
+                    <tr>
+                        <th>Date &amp; Time</th>
+                        <td th:text="${dateTime}"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Type</th>
+                        <td>Biometric Payment</td>
+                    </tr>
+
+                    <tr>
+                        <th>Amount</th>
+                        <td th:text="${amount}"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Account</th>
+                        <td th:text="${maskedAccount}"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Device Id</th>
+                        <td th:text="${deviceInfo}"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Location</th>
+                        <td th:text="${locationInfo}">Location</td>
+                    </tr>
+
+                    <tr>
+                        <th>Status</th>
+                        <td th:text="${status}"
+                            th:style="'color:' + (${status} == 'SUCCESS' ? 'green' : (${status} == 'FAILED' ? 'red' : 'black'))">
+                            Completed
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <p class="note">
+                If you didn't perform this transaction, please <a th:href="${supportLink}" href="#">contact support</a> or call <strong th:text="${supportPhone}">1800-XXX-XXX</strong> immediately.
+            </p>
+
+            <p class="note" style="margin-top:10px;">
+                <small>
+                    For your security, we never send full fingerprint data or full account numbers by email.
+                    This email is a notification only.
+                </small>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; <span th:text="${year}">2025</span> Bio-Pay Bank Pvt Lmt. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

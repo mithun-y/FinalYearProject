@@ -1,0 +1,168 @@
+/* Main container */
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form container */
+.registration-form {
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.registration-form:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  font-size: 24px;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-top: 8px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border: 1px solid #3498db;
+  background-color: #fff;
+}
+
+button.submit-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+button.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Status message */
+.status-message {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.status-message {
+  color: #ff4d4d; /* red by default */
+}
+
+.status-message:contains("Successful") {
+  color: #2ecc71; /* green for success */
+}
+
+.status-message:contains("Failed") {
+  color: #e74c3c; /* red for error */
+}
+
+/* Fingerprint image preview */
+.image-preview {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Hide the default file input */
+.file-input {
+  display: none;
+}
+
+/* Custom file label styling */
+.custom-file-label {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-label:hover {
+  background-color: #2980b9;
+}
+
+/* Fingerprint image preview styling */
+.image-preview {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #0b5d3b;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

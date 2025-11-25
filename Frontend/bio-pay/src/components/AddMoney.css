@@ -1,0 +1,167 @@
+/* Full Page Modern Background */
+.modern-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at top, #0d1224, #000);
+  font-family: "Inter", sans-serif;
+  padding: 20px;
+}
+
+/* GLASSMORPHISM CARD */
+.glass-card {
+  width: 380px;
+  padding: 35px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+
+  animation: slideDown 0.8s ease;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+/* Modern Input */
+.input-modern {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+
+  border-radius: 12px;
+  border: none;
+  outline: none;
+
+  font-size: 1rem;
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+
+  transition: 0.25s ease;
+}
+
+/* Neon Focus */
+.input-modern:focus {
+  box-shadow: 0 0 8px #6366f1;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Account Box */
+.account-box {
+  text-align: left;
+  margin-top: 15px;
+  color: #eee;
+}
+
+.account-box p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Modern Button */
+.modern-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 15px;
+
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.modern-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(99,102,241,0.4);
+}
+
+/* Messages */
+.msg {
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
+
+.success {
+  color: #4ade80;
+}
+
+.error {
+  color: #f87171;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.msg.error {
+  color: #ff4d4d;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.msg {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  opacity: 0;            /* Hidden before animation */
+  animation: fadeSlide 0.5s forwards;
+}
+
+.success {
+  background: rgba(0, 255, 120, 0.12);
+  border-left: 4px solid #00d97e;
+  color: #00d97e;
+}
+
+.error {
+  background: rgba(255, 60, 60, 0.12);
+  border-left: 4px solid #ff3c3c;
+  color: #ff3c3c;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

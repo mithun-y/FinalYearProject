@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+        .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 6px #ddd; }
+        h2 { color: #4CAF50; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Welcome, <span th:text="${name}"></span>!</h2>
+    <p>Thank you for registering at <b>Biometric Fingerprint Payment System</b>.</p>
+    <p>Your account number is: <b th:text="${accountNumber}"></b></p>
+    <p>Your account balance is: <b th:text="${amount}"></b></p>
+    <p>We’re excited to have you onboard 🚀</p>
+</div>
+</body>
+</html>
