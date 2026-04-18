@@ -1,4 +1,4 @@
-<h4>•	Developed a secure cardless payment system using fingerprint + PIN authentication with AES encryption and BCrypt hashing.</h4><br/>
+<h4>•	Developed a secure cardless payment system using fingerprint + PIN authentication with AES encryption and BCrypt hashing.<br/></h4>
 <h4>•	Integrated SourceAFIS achieving >98% fingerprint match accuracy in testing.<br/></h4>
 <h4>•	Optimized REST APIs with Spring Boot and PostgreSQL, improving authentication response time by ~30%.</h4>
 
