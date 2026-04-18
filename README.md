@@ -1,3 +1,8 @@
+•	Developed a secure cardless payment system using fingerprint + PIN authentication with AES encryption and BCrypt hashing.
+•	Integrated SourceAFIS achieving >98% fingerprint match accuracy in testing.
+•	Optimized REST APIs with Spring Boot and PostgreSQL, improving authentication response time by ~30%.
+
+
 '''TO SEE COMMITS AND PROJECT PROGRESS -> CHECK OUT THIS-> https://github.com/mithun-y/Biometric-Payment-System-'''
 
 <h2>SYSTEM DESIGN</h2>
